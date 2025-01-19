@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:background="#ffffff">
+
+    <!-- описание слова -->
+    <TextView
+        android:id="@+id/word_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="описание слова"
+        android:textSize="18sp"
+        android:textColor="#000000"
+        android:layout_marginBottom="8dp"
+        android:layout_alignParentTop="true" />
+
+    <!-- состояние слова -->
+    <TextView
+        android:id="@+id/current_word_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="__ __ __"
+        android:textSize="24sp"
+        android:textColor="#000000"
+        android:layout_below="@id/word_description"
+        android:layout_marginTop="12dp" />
+
+    <!-- поле для ввода буквы -->
+    <EditText
+        android:id="@+id/guess_letter_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="введите букву"
+        android:inputType="text"
+        android:maxLength="1"
+        android:layout_below="@id/current_word_state"
+        android:layout_marginTop="10dp"
+        android:padding="8dp"
+        android:background="@android:drawable/editbox_background" />
+
+    <!-- кнопка проверки буквы -->
+    <Button
+        android:id="@+id/check_letter_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="проверить букву"
+        android:layout_below="@id/guess_letter_input"
+        android:layout_marginTop="8dp"
+        android:backgroundTint="#F19C79"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+    <!-- кнопка угадывания слова -->
+    <Button
+        android:id="@+id/guess_word_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="угадать слово"
+        android:layout_below="@id/check_letter_button"
+        android:layout_marginTop="0dp"
+        android:backgroundTint="#7EA16B"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:padding="12dp" />
+
+    <!-- общие очки -->
+    <TextView
+        android:id="@+id/remaining_attempts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/guess_word_button"
+        android:layout_marginTop="7dp"
+        android:text="оставшиеся попытки: 3"
+        android:textColor="#000000"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/total_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="счет: 0"
+        android:textSize="16sp"
+        android:textColor="#000000"
+        android:layout_below="@id/remaining_attempts"
+        android:layout_marginTop="8dp" />
+
+    <!-- барабан -->
+    <ImageView
+        android:id="@+id/wheel_image"
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:src="@drawable/wheel_of"
+        android:layout_below="@id/wheel_arrow"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="1dp" />
+
+    <!-- стрелка -->
+    <ImageView
+        android:id="@+id/wheel_arrow"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/arrow_icon"
+        android:layout_below="@id/total_score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-20dp"
+        android:contentDescription="Arrow pointing to wheel"
+        android:rotation="0" />
+
+    <!-- кнопка для вращения барабана -->
+    <Button
+        android:id="@+id/spin_wheel_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wheel_image"
+        android:layout_marginTop="5dp"
+        android:backgroundTint="#596F62"
+        android:padding="12dp"
+        android:textSize="16sp"
+        android:text="крутите барабан"
+        android:textColor="#FFFFFF"
+        tools:ignore="HardcodedText" />
+
+    <!-- результат игры -->
+    <TextView
+        android:id="@+id/game_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="игра идет"
+        android:textSize="18sp"
+        android:textColor="#F19C79"
+        android:textStyle="bold"
+        android:layout_below="@id/spin_wheel_button"
+        android:layout_marginTop="0dp"
+        android:gravity="center" />
+
+</RelativeLayout>

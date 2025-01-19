@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="16dp"
+    android:background="#ffffff">
+
+    <!-- заголовок -->
+    <TextView
+        android:id="@+id/game_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="⊹₊⟡ ⋆ ПОЛЕ ЧУДЕС ⊹₊⟡ ⋆"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="30dp"/>
+
+    <!-- заголовок -->
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- выберите роль - "
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- кнопка для администратора -->
+    <Button
+        android:id="@+id/btn_admin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#596F62"
+        android:text="администратор"
+        android:textSize="20dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- кнопка для игрока -->
+    <Button
+        android:id="@+id/btn_player"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#F19C79"
+        android:text="игрок"
+        android:textSize="20dp"
+        android:layout_marginBottom="16dp"/>
+
+    <!-- кнопка для игрока -->
+    <Button
+        android:id="@+id/btn_rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#A6A670"
+        android:text="правила"
+        android:textSize="20dp"
+        android:layout_marginTop="50dp"/>
+
+</LinearLayout>
